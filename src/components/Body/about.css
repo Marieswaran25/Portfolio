@@ -1,0 +1,22 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hire{
+    border:1px solid white !important;
+    width:150px;
+    height:50px;
+    font-family: 'Lexend Peta', sans-serif;
+
+}
+#myimage{
+    box-shadow: 10px 10px 20px rgb(26, 26, 26);
+}
+
+.description{
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    line-height: 40px;
+}
