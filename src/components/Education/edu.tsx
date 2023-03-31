@@ -1,4 +1,4 @@
-import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faCloudArrowDown, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
@@ -7,7 +7,6 @@ import {
   Button,
   ProgressBar,
 } from "react-bootstrap";
-import "./edu.css";
 const resume=require('./Marieswaran-Resume.pdf')
 
 const education = require("./edu.json");
@@ -53,7 +52,7 @@ function Education() {
                         displayInfo(index);
                       }}
                     >
-                      <h4>{education[index].level}</h4>
+                      <h4>{education[index].level} <FontAwesomeIcon icon={faGraduationCap} /></h4>
                     </Card>
                   );
                 } else {
@@ -89,7 +88,7 @@ function Education() {
                           displayInfo(index);
                         }}
                       >
-                        <h4>{education[index].level}</h4>
+                        <h4>{education[index].level}  <FontAwesomeIcon icon={faGraduationCap} /></h4>
                       </Card>
                     );
                   }
