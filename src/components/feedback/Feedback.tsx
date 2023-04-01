@@ -5,7 +5,7 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 export default function Connect() {
   return (
     <Container>
-      <div style={{ height: "70vh", marginTop: "100px" }}>
+      <div style={{ height: "auto","marginTop":"50px"}} className="" id="feedback">
         <div className="row">
         <div className="col-12 col-md-5 content">
             <div style={{ position: "relative" }}>
@@ -14,7 +14,7 @@ export default function Connect() {
           </div>
 
           <div className="col-12 col-md-7 content" >
-              <Card bg="dark" style={{"width":"50%"}}>
+              <Card bg="dark" style={{"width":"90%"}}>
               <Form
                   className="mb-4 pt-3"
                   style={{ width: "auto"}}
@@ -28,6 +28,7 @@ export default function Connect() {
                       type="email"
                       placeholder="Enter your Email"
                       id="Email"
+                      style={{"height":"50px"}}
                     />
                     <Form.Text className="text-muted"></Form.Text>
                   </Form.Group>
@@ -37,6 +38,7 @@ export default function Connect() {
                     <Form.Control as={"textarea"}
                       placeholder="Enter your feedback"
                       id="feedback"
+                      style={{"height":"100px"}}
                     />
                     <Form.Text className="text-muted"></Form.Text>
                   </Form.Group>

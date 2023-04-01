@@ -5,10 +5,10 @@ import "./connect.css";
 export default function Connect() {
   return (
     <Container>
-      <div style={{ height: "70vh", marginTop: "100px" }}>
+      <div style={{ height: "auto","marginTop":"50px"}} className="" id="contact">
         <div className="row">
-          <div className="col-12 col-md-6 content2">
-            <div style={{ position: "relative" }}>
+          <div className="col-12 col-md-6 order-2 order-md-1 content">
+            <div style={{ position: "relative","marginTop":"30px" }}>
               <Card bg="dark">
                 <div className="content4">
                   {data.map((val: any, index: any) => {
@@ -33,7 +33,7 @@ export default function Connect() {
               </Card>
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6  order-1 order-md-2 content">
             <div style={{ position: "relative" }}>
               <h4>"We Connect together,Grow together"</h4>
             </div>

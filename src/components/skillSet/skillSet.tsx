@@ -4,9 +4,9 @@ const skilldata = require("../../Data/skillData.json");
 function SkillSet() {
   return (
     <Container>
-      <div style={{ marginTop: "30px" }}>
+      <div style={{"height":"auto","marginTop":"50px"}} className="" id="skills">
         <div className="row">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 order-2 order-md-1">
             <div>
               {skilldata.map((val: any, index: any) => {
                 console.log(skilldata[index].percent);
@@ -26,7 +26,7 @@ function SkillSet() {
               })}
             </div>
           </div>
-          <div className="col-12 col-md-6 content">
+          <div className="col-12 col-md-6 order-1 order-md-2 content">
             <div className="content">
               <h4>"Repeatition is the mother of skill"</h4>
             </div>

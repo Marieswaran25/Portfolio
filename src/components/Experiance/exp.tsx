@@ -8,19 +8,18 @@ function Experiance() {
     }
   return (
     <Container>
-      <div style={{ height: "50vh", marginTop: "30px" }}>
-        <div className="row">
+      <div style={{ height: "auto","marginTop":"50px"}} className="content" id="experiance">
+        <div className="row" >
           <div className="col-12 col-md-6 content">
             <div>
               <h4>
-                "Experiance is Knowledge.All the rest are Information,Experiance
-                is the only source of Education"
+                "Experiance is Knowledge.All the rest are Information"
               </h4>
               <h5>-Albert Einstein</h5>
             </div>
           </div>
           <div className="col-12 col-md-6">
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative","marginTop":"30px"}}>
               <Card bg="dark">
                 <div className="content2" style={{"width":"90%"}}>
                 <h2 style={{"color":"rgb(28, 199, 28)"}}>Prenetics Innovation Labs</h2>

@@ -29,9 +29,9 @@ function Education() {
 
   return (
     <Container>
-      <div style={{ height: "40vh" }}>
-        <div className="row content">
-          <div className="col-12 col-md-7 content">
+      <div style={{ height: "auto" ,"marginTop":"50px"}} className="" id="education">
+        <div className="row">
+          <div className="col-12 col-md-6 content">
             <div>
               <h4>
                 "Develop a passion of learning,if you do,you will never cease to
@@ -39,7 +39,7 @@ function Education() {
               </h4>
             </div>
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-md-6">
             <div style={{ position: "relative" }}>
               {education.map((val: any, index: number) => {
                 if (!cardState) {
@@ -97,7 +97,7 @@ function Education() {
             </div>
             <Button
               className="btn-warning"
-              style={{ borderRadius: "100px", marginTop: "20px" }}
+              style={{ borderRadius: "100px", marginTop: "40px" }}
               onClick={e=>downloadcv()}
             >
               Download CV <FontAwesomeIcon icon={faCloudArrowDown} />
