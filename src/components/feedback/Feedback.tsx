@@ -7,6 +7,18 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 export default function FeedBack() {
   const [count, setCount] = React.useState("Loading...");
   const [Loading, setLoading] = React.useState(true);
+ const [feedinfo, setFeed]: any = React.useState({
+  Email: "",
+  Feedback: "",
+});
+const handle = (e: any) => {
+  setFeed({...feedinfo,[e.target.id]:e.target.value})
+};
+const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const userEmail=feedinfo.Email;
+  const userFeedback=feedinfo.feedback;
+  window.open(`mailto:marieswaranbmw@gmail.com?subject=Feedback from ${userEmail}&body=${userFeedback}`);
+}
   async function websiteVisits() {
     try {
       const response = await axios.get(
@@ -55,12 +67,13 @@ export default function FeedBack() {
             </div>
           </div>
 
-          <div className="col-12 col-md-7 content">
+          <div className="col-12 col-md-7 content" style={{"marginTop":"30px"}}>
             <Card bg="dark" style={{ width: "90%" }}>
               <Form
                 className="mb-4 pt-3"
                 style={{ width: "auto" }}
                 autoComplete="off"
+                onSubmit={e=>{handlesubmit(e)}}
               >
                 <Form.Group className="mb-4">
                   <Form.Label className="text-light">
@@ -71,6 +84,8 @@ export default function FeedBack() {
                     placeholder="Enter your Email"
                     id="Email"
                     style={{ height: "50px" }}
+                    value={feedinfo.Email}
+                    onChange={e=>{handle(e)}}
                   />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>
@@ -80,8 +95,10 @@ export default function FeedBack() {
                   <Form.Control
                     as={"textarea"}
                     placeholder="Enter your feedback"
-                    id="feedback"
+                    id="Feedback"
                     style={{ height: "100px" }}
+                    value={feedinfo.Feedback}
+                    onChange={e=>{handle(e)}}
                   />
                   <Form.Text className="text-muted"></Form.Text>
                 </Form.Group>

@@ -1,5 +1,5 @@
 import { Card, Container, ProgressBar } from "react-bootstrap";
-const skilldata = require("../../Data/skillData.json");
+import {social} from "../../Data/skillData.js";
 
 function SkillSet() {
   return (
@@ -8,16 +8,18 @@ function SkillSet() {
         <div className="row">
           <div className="col-12 col-md-6 order-2 order-md-1">
             <div>
-              {skilldata.map((val: any, index: any) => {
+              {social.map((val: any, index: any) => {
                 return (
                   <Card bg="dark">
                     <Card.Body>
-                      <Card.Title>{skilldata[index].name}</Card.Title>
+                    
+                      <Card.Title style={{"display":"flex","gap":"10px"}}><img src={social[index].img} alt="" style={{"width":"30px","height":"30px"}}/>
+                        {social[index].name}</Card.Title>
                       <Card.Text></Card.Text>
                       <ProgressBar
-                        now={skilldata[index].percent}
+                        now={Number(social[index].percent)}
                         variant="primary"
-                        label={skilldata[index].percent + `%`}
+                        label={social[index].percent + `%`}
                       />
                     </Card.Body>
                   </Card>
