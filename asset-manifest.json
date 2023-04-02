@@ -1,18 +1,23 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.459a014f.css",
-    "main.js": "/Portfolio/static/js/main.a5baec14.js",
+    "main.js": "/Portfolio/static/js/main.2f2878b0.js",
     "static/media/logo.jpg": "/Portfolio/static/media/logo.1cfab2edf0771d9e6fc0.jpg",
     "static/media/Marieswaran-Resume.pdf": "/Portfolio/static/media/Marieswaran-Resume.3ebc69aa84ed17712fc7.pdf",
+    "static/media/postgre.png": "/Portfolio/static/media/postgre.a7fa39912c91e079e90b.png",
+    "static/media/react.png": "/Portfolio/static/media/react.809fed23bcdd686de66e.png",
     "static/media/whatsapp.png": "/Portfolio/static/media/whatsapp.efdb3204559596be1257.png",
+    "static/media/node-js.png": "/Portfolio/static/media/node-js.e328955d6bbbf3ebc72b.png",
     "static/media/github.png": "/Portfolio/static/media/github.a855c3975c028d8069f5.png",
     "static/media/instagram.png": "/Portfolio/static/media/instagram.75e0546a6b5abe4c0506.png",
+    "static/media/typescript.png": "/Portfolio/static/media/typescript.af108db04a54d784da9b.png",
+    "static/media/html.png": "/Portfolio/static/media/html.485b6e20561ff56f5e38.png",
     "index.html": "/Portfolio/index.html",
     "main.459a014f.css.map": "/Portfolio/static/css/main.459a014f.css.map",
-    "main.a5baec14.js.map": "/Portfolio/static/js/main.a5baec14.js.map"
+    "main.2f2878b0.js.map": "/Portfolio/static/js/main.2f2878b0.js.map"
   },
   "entrypoints": [
     "static/css/main.459a014f.css",
-    "static/js/main.a5baec14.js"
+    "static/js/main.2f2878b0.js"
   ]
 }
