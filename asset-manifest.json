@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.459a014f.css",
-    "main.js": "/Portfolio/static/js/main.b5783b2a.js",
+    "main.js": "/Portfolio/static/js/main.7f67ee7f.js",
     "static/media/logo.jpg": "/Portfolio/static/media/logo.1cfab2edf0771d9e6fc0.jpg",
     "static/media/Marieswaran-Resume.pdf": "/Portfolio/static/media/Marieswaran-Resume.3ebc69aa84ed17712fc7.pdf",
     "static/media/postgre.png": "/Portfolio/static/media/postgre.a7fa39912c91e079e90b.png",
@@ -14,10 +14,10 @@
     "static/media/html.png": "/Portfolio/static/media/html.485b6e20561ff56f5e38.png",
     "index.html": "/Portfolio/index.html",
     "main.459a014f.css.map": "/Portfolio/static/css/main.459a014f.css.map",
-    "main.b5783b2a.js.map": "/Portfolio/static/js/main.b5783b2a.js.map"
+    "main.7f67ee7f.js.map": "/Portfolio/static/js/main.7f67ee7f.js.map"
   },
   "entrypoints": [
     "static/css/main.459a014f.css",
-    "static/js/main.b5783b2a.js"
+    "static/js/main.7f67ee7f.js"
   ]
 }
