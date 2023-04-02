@@ -16,7 +16,7 @@ const handle = (e: any) => {
 };
 const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const userEmail=feedinfo.Email;
-  const userFeedback=feedinfo.feedback;
+  const userFeedback=feedinfo.Feedback;
   window.open(`mailto:marieswaranbmw@gmail.com?subject=Feedback from ${userEmail}&body=${userFeedback}`);
 }
   async function websiteVisits() {
