@@ -44,3 +44,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# count visitors api
+>`https://api.countapi.xyz/set/marieswaran.in/984b31b5-b2ff-4f89-a9db-9d0abaabcdcd?value=0` to reset count

@@ -9,6 +9,7 @@ import Navheader from './components/Navbar/nav';
 import SkillSet from './components/skillSet/skillSet';
 
 function App() {
+
   return (
     <div className="App bg-dark text-light">
       <Navheader />

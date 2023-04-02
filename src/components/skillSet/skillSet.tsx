@@ -9,7 +9,6 @@ function SkillSet() {
           <div className="col-12 col-md-6 order-2 order-md-1">
             <div>
               {skilldata.map((val: any, index: any) => {
-                console.log(skilldata[index].percent);
                 return (
                   <Card bg="dark">
                     <Card.Body>
