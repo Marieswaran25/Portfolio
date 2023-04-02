@@ -34,8 +34,8 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     if (Loading) {
       const fetchData = async (): Promise<Number> => {
         setLoading(false);
-        const result = await websiteVisits();
-        setCount(result);
+        const result = await websiteVisits()-1;
+        setCount(`${result}`);
         return result;
       };
       fetchData();
