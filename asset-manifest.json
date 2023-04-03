@@ -1,9 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.459a014f.css",
-    "main.js": "/Portfolio/static/js/main.b23884fd.js",
-    "static/media/logo.jpg": "/Portfolio/static/media/logo.1cfab2edf0771d9e6fc0.jpg",
+    "main.css": "/Portfolio/static/css/main.0e526ae5.css",
+    "main.js": "/Portfolio/static/js/main.ff8d6c84.js",
+    "static/media/3.jpg": "/Portfolio/static/media/3.c939cd99d9cae846ebef.jpg",
+    "static/media/2.jpg": "/Portfolio/static/media/2.20adef5780b16896323b.jpg",
+    "static/media/4.jpg": "/Portfolio/static/media/4.3f5dea7bac89c716a6cd.jpg",
     "static/media/Marieswaran-Resume.pdf": "/Portfolio/static/media/Marieswaran-Resume.3ebc69aa84ed17712fc7.pdf",
+    "static/media/5.jpg": "/Portfolio/static/media/5.0617a78b5318e2109402.jpg",
+    "static/media/6.jpg": "/Portfolio/static/media/6.103649d0d91aa066248e.jpg",
+    "static/media/1.jpg": "/Portfolio/static/media/1.56da18d989a460536b3e.jpg",
     "static/media/postgre.png": "/Portfolio/static/media/postgre.a7fa39912c91e079e90b.png",
     "static/media/react.png": "/Portfolio/static/media/react.809fed23bcdd686de66e.png",
     "static/media/whatsapp.png": "/Portfolio/static/media/whatsapp.efdb3204559596be1257.png",
@@ -13,11 +18,11 @@
     "static/media/typescript.png": "/Portfolio/static/media/typescript.af108db04a54d784da9b.png",
     "static/media/html.png": "/Portfolio/static/media/html.485b6e20561ff56f5e38.png",
     "index.html": "/Portfolio/index.html",
-    "main.459a014f.css.map": "/Portfolio/static/css/main.459a014f.css.map",
-    "main.b23884fd.js.map": "/Portfolio/static/js/main.b23884fd.js.map"
+    "main.0e526ae5.css.map": "/Portfolio/static/css/main.0e526ae5.css.map",
+    "main.ff8d6c84.js.map": "/Portfolio/static/js/main.ff8d6c84.js.map"
   },
   "entrypoints": [
-    "static/css/main.459a014f.css",
-    "static/js/main.b23884fd.js"
+    "static/css/main.0e526ae5.css",
+    "static/js/main.ff8d6c84.js"
   ]
 }
