@@ -49,7 +49,7 @@ function Experiance() {
                   <li>Collaborated Effectively in Product Development along with
                   diverse culture of people.</li>
                 </ul>
-                <Button className="btn btn-dark" onClick={e=>{navToprenetics()}}>Info <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Button>
+                <Button className="btn btn-dark" onClick={e=>{navToprenetics()}} style={{fontFamily: 'Trade Winds,cursive'}}>More Info <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></Button>
               </Card>
             </div>
           </div>

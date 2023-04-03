@@ -9,8 +9,8 @@ class Navheader extends Component {
       <Container>
         <Navbar.Brand href="" style={{    fontFamily: 'Trade Winds,cursive'}}>Marieswaran</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#education">Education</Nav.Link>
             <Nav.Link href="#skills">Skills</Nav.Link>
