@@ -1,18 +1,20 @@
 [
     {
         "level":"SSLC",
-        "name":"Seeni Matriculation School",
+        "name":"Seeni matriculation school",
+        "dept":"Maths-science",
         "percent":97.8
     },
     {
         "level":"HSC",
-        "name":"C.K.T.Matric.hr.sec.School",
+        "name":"C.K.T.matric.higher.secondary.school",
+        "dept":"Bio-Maths",
         "percent":89.3
     },
     {
         "level":"UG",
-        "name":"Government College of Engineering-Srirangam",
-        "dept":"Electronics and Communication Engineering",
+        "name":"Govt. college of engineering,srirangam",
+        "dept":"Electronics and Communication",
         "percent":80
     }
 

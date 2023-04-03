@@ -14,7 +14,7 @@ function downloadcv(){
   window.open(resume, '_blank');
 
 }
-function Education() {
+function Education(props: { bg: string,text:string }) {
   const [cardState, setCardState] = React.useState(false);
   const [cardindex, setCardindex] = React.useState(10);
 
@@ -28,7 +28,7 @@ function Education() {
   }
 
   return (
-    <Container>
+    <Container className={`bg-${props.bg} text-${props.text}`}>
       <div style={{ height: "auto" ,"marginTop":"50px"}} className="" id="education">
         <div className="row">
           <div className="col-12 col-md-6 content">
@@ -39,41 +39,45 @@ function Education() {
               </h4>
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6" style={{"marginTop":"30px"}}>
             <div style={{ position: "relative" }}>
               {education.map((val: any, index: number) => {
                 if (!cardState) {
                   return (
                     <Card
-                      bg="dark"
+                      bg={props.bg}
                       className="content"
-                      style={{ height: "100px" }}
+                      style={{ height: "100px",}}
                       onMouseEnter={(e) => {
                         displayInfo(index);
                       }}
+                      key={`${index}`}
                     >
-                      <h4>{education[index].level} <FontAwesomeIcon icon={faGraduationCap} /></h4>
+                      <h4 style={{fontFamily:"Trade Winds,cursive"}}>{education[index].level} <FontAwesomeIcon icon={faGraduationCap} /></h4>
                     </Card>
                   );
                 } else {
                   if (Number(cardindex) === index) {
                     return (
                       <Card
-                        bg="dark"
+                        bg={props.bg}
                         className="content"
-                        style={{ height: "100px" }}
+                        style={{ height: "100px"}}
                         onMouseLeave={(e) => {
                           displayOld(index);
                         }}
-                      >
+                        key={`${index}`}>
                         <div style={{ width: "100%" }}>
-                          <h5>{education[cardindex].name}</h5>
-                          <h5>{education[cardindex].dept}</h5>
-
+                         <div className="content2" style={{ width: "90%" }}>
+                         <h5 style={{ fontSize: "20px" ,fontFamily:"Trade Winds,cursive",whiteSpace:"nowrap"}}>{education[cardindex].name}</h5>
+                         </div>
+                         <h6 className="text-muted">{education[cardindex].dept}</h6>
                           <ProgressBar
                             now={education[cardindex].percent}
+                            style={{ height: "19px" }}
                             variant="success"
-                            label={education[cardindex].percent + `%`}
+                            label={education[cardindex].percent + `%`
+                          }
                           />
                         </div>
                       </Card>
@@ -81,14 +85,15 @@ function Education() {
                   } else {
                     return (
                       <Card
-                        bg="dark"
+                        bg={props.bg}
                         className="content"
-                        style={{ height: "100px" }}
+                        style={{ height: "100px"}}
                         onMouseEnter={(e) => {
                           displayInfo(index);
                         }}
+                        key={`${index}`}
                       >
-                        <h4>{education[index].level}  <FontAwesomeIcon icon={faGraduationCap} /></h4>
+                        <h4 style={{fontFamily:"Trade Winds,cursive"}}>{education[index].level}  <FontAwesomeIcon icon={faGraduationCap} /></h4>
                       </Card>
                     );
                   }
@@ -97,7 +102,7 @@ function Education() {
             </div>
             <Button
               className="btn-warning"
-              style={{ borderRadius: "100px", marginTop: "40px" }}
+              style={{ borderRadius: "100px", marginTop: "40px" ,fontFamily:"Trade Winds,cursive"}}
               onClick={e=>downloadcv()}
             >
               Download CV <FontAwesomeIcon icon={faCloudArrowDown} />

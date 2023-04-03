@@ -4,7 +4,7 @@ import "./about.css";
 import { img } from "../../Data/image";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-export default function About() {
+export default function About(props: { bg: string,text:string }) {
   const [image, setimg] = React.useState(img[1]);
   const imgArray = img;
   function changephoto() {
@@ -15,10 +15,10 @@ export default function About() {
     window.location.href='#contact'
   }
   return (
-    <Container>
+    <Container className={`bg-${props.bg} text-${props.text}`}>
       <div
         style={{ height: "auto", marginTop: "30px" }}
-        className="content"
+        
         id="home"
       >
         <div className="content">
@@ -26,10 +26,11 @@ export default function About() {
             <div className="col-12 col-md-6 order-2 order-md-1 content">
               <div className="content" style={{ marginTop: "30px" }}>
                 <img
-                  id="myimage"
+                  id={`myimage-${props.bg}`}
                   src={image}
-                  alt="Myimage"
+                  alt={`Myimage-${props.bg}`}
                   className="img-fluid"
+                  onClick={(e) => changephoto()}
                   onMouseEnter={(e) => changephoto()}
                 />
               </div>
@@ -45,11 +46,10 @@ export default function About() {
                 <div style={{ marginTop: "4%" }}>
                   <h1 className="display-4 text-warning">Hey, I'm Marieswaran</h1>
                   <h4 className="text-muted context">
-                    {" "}
                     Full stack Web Developer
                   </h4>
-                  <p className='mt-3'>Try out something new!</p>
-                  <button className="text-light btn btn-dark hire mt-2" style={{fontFamily: 'Trade Winds,cursive'}} onClick={e=>gotocontact()}>
+                  <p className='mt-3'>Try out something new!!</p>
+                  <button className={`text-${props.text} btn btn-${props.bg} hire mt-2`} style={{fontFamily: 'Trade Winds,cursive'}} onClick={e=>gotocontact()}>
                     Contact me <FontAwesomeIcon icon={faPhone} />
                   </button>
                 </div>

@@ -4,7 +4,7 @@ import axios from "axios";
 import React from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
 // import { data } from "../../Data/social";
-export default function FeedBack() {
+export default function FeedBack(props: { bg: string,text:string }) {
   const [count, setCount] = React.useState("Loading...");
   const [Loading, setLoading] = React.useState(true);
  const [feedinfo, setFeed]: any = React.useState({
@@ -42,7 +42,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     }
   });
   return (
-    <Container>
+    <Container className={`bg-${props.bg} text-${props.text}`}>
       <div
         style={{ height: "auto", marginTop: "50px" }}
         className=""
@@ -53,24 +53,25 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <div style={{ position: "relative" }}>
               <h4>"We all need people who will give us feedback.."</h4>
               <Card
-                bg="dark"
+                bg={props.bg}
                 style={{
                   height: "250px",
                   width: "100%",
-                  boxShadow: "10px 10px 30px rgb(26, 26, 26)",
+                  marginTop: "30px"
                 }}
                 className="content"
+                id={`myimage2-${props.bg}`}
               >
-                <h1 style={{ fontSize: "80px" }}>{count}</h1>
+                <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
               </Card>
             </div>
           </div>
 
           <div className="col-12 col-md-7 content" style={{"marginTop":"30px"}}>
-            <Card bg="dark" style={{ width: "90%" }}>
+            <Card bg={props.bg} style={{ width: "90%",border:"none" }}>
               <Form
-                className="mb-4 pt-3"
+                className={`mb-4 pt-3 bg-${props.bg} text-${props.text}`}
                 style={{ width: "auto" }}
                 autoComplete="off"
                 onSubmit={e=>{handlesubmit(e)}}
