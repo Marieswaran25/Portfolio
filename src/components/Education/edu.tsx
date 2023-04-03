@@ -69,7 +69,7 @@ function Education(props: { bg: string,text:string }) {
                         key={`${index}`}>
                         <div style={{ width: "100%" }}>
                          <div className="content2" style={{ width: "90%" }}>
-                         <h5 style={{ fontSize: "20px" ,fontFamily:"Trade Winds,cursive",whiteSpace:"nowrap"}}>{education[cardindex].name}</h5>
+                         <h5 style={{ fontSize: "18px" ,fontFamily:"Trade Winds,cursive"}}>{education[cardindex].name}</h5>
                          </div>
                          <h6 className="text-muted">{education[cardindex].dept}</h6>
                           <ProgressBar
