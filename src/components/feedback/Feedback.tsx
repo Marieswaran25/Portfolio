@@ -72,7 +72,10 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     let regexp = /android|iphone|kindle|ipad/i;
     let isMobileDevice = regexp.test(details);
     if(isMobileDevice){
-        setmsg('Current this feature available on desktop only' )
+        setmsg('Sorry, Currently this feature available on Desktop only :(' )
+        setTimeout(()=>{
+          setmsg('Anyways,Have a nice day!')
+        },2000)
     }
 
     if(!("Notification" in window)){
@@ -112,7 +115,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
                 <Button className="btn btn-secondary" style={{"borderRadius":"100px"}}onClick={e=>shownotification()}>Greetings <FontAwesomeIcon icon={faHeart} /></Button>
-                <p>{mobilemsg}</p>
+                <h6 className="text-muted">{mobilemsg}</h6>
               </Card>
             </div>
           </div>
