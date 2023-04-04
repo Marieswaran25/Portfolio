@@ -3,16 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Card, Button } from "react-bootstrap";
 
 function Experiance(props: { bg: string,text:string }) {
+
   function navToprenetics() {
     window.open("https://www.prenetics.com/", "_blank");
   }
+
   return (
     <Container className={`bg-${props.bg} text-${props.text}`}>
-      <div
-        style={{ height: "auto", marginTop: "50px" }}
-        className="content"
-        id="experiance"
-      >
+      <div style={{ height: "auto", marginTop: "50px" }} className="content" id="experiance">
         <div className="row">
           <div className="col-12 col-md-6 content">
             <div>
@@ -24,9 +22,7 @@ function Experiance(props: { bg: string,text:string }) {
             <div style={{ position: "relative", marginTop: "30px" }}>
               <Card bg={props.bg} className={`text-${props.text}`}>
                 <div className="content2" style={{ width: "90%" }}>
-                  <h2 style={{ color: "rgb(28, 199, 28)" }}>
-                    Prenetics Innovation Labs
-                  </h2>
+                  <h2 style={{ color: "rgb(28, 199, 28)" }}>Prenetics Innovation Labs</h2>
                   <p className="text-muted">Chennai</p>
                 </div>
                 <h6 className="text-muted">Aug2022-Apr2023</h6>
@@ -49,14 +45,8 @@ function Experiance(props: { bg: string,text:string }) {
                     diverse culture of people.
                   </li>
                 </ul>
-                <Button
-                  className={`btn btn-${props.bg} text-${props.text}`}
-                  onClick={(e) => {
-                    navToprenetics();
-                  }}
-                  style={{ fontFamily: "Trade Winds,cursive" }}
-                >
-                  More Info <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                <Button className={`btn btn-${props.bg} text-${props.text}`} onClick={(e) => {navToprenetics()}} style={{ fontFamily: "Trade Winds,cursive" }}>
+                More Info <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </Button>
               </Card>
             </div>

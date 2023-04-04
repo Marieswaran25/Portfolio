@@ -2,6 +2,7 @@ import { Card, Container, ProgressBar } from "react-bootstrap";
 import {social} from "../../Data/skillData.js";
 
 function SkillSet(props: { bg: string,text:string }) {
+
   return (
     <Container className={` bg-${props.bg} text-${props.text}`}>
       <div style={{"height":"auto","marginTop":"50px"}}  id="skills">
@@ -10,19 +11,11 @@ function SkillSet(props: { bg: string,text:string }) {
             <div>
               {social.map((val: any, index: any) => {
                 return (
-                  <Card bg={props.bg} key={`${index}`}
-                  >
+                  <Card bg={props.bg} key={`${index}`}>
                     <Card.Body>
-                    
                       <Card.Title style={{"display":"flex","gap":"10px"}}><img src={social[index].img} alt="" style={{"width":"30px","height":"30px"}}/>
                         {social[index].name}</Card.Title>
-                      <Card.Text></Card.Text>
-                      <ProgressBar
-                        animated={true}
-                        now={Number(social[index].percent)}
-                        variant="primary"
-                        label={social[index].percent + `%`}
-                      />
+                      <ProgressBar animated={true} now={Number(social[index].percent)} variant="primary" label={social[index].percent + `%`}/>
                     </Card.Body>
                   </Card>
                 );

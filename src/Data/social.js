@@ -4,9 +4,6 @@ import github from '../media/github.png'
 import instagram from '../media/instagram.png'
 import whatsapp from '../media/whatsapp.png'
 
-
-
-
 export const data=[
     {
         "name":"LinkedIn",

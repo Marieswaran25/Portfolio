@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { data } from "../../Data/social";
 import "./connect.css";
@@ -13,19 +12,8 @@ export default function Connect(props: { bg: string,text:string }) {
                 <div className="content" style={{"flexDirection":"row",gap:"30px",marginBottom:"50px"}}>
                   {data.map((val: any, index: any) => {
                     return (
-                        <a
-                          style={{ textDecoration: "none" }}
-                          className="text-light"
-                          href={data[index].Link}
-                          key={`${index}`}
-                        >
-                          <img
-                            src={data[index].image}
-                            alt={data[index].name}
-                            style={{ width: "35px", height: "35px" }}
-                            key={`${index}`}
-
-                          />
+                        <a style={{ textDecoration: "none" }} href={data[index].Link} key={`${index}`}>
+                          <img src={data[index].image} alt={data[index].name} style={{ width: "35px", height: "35px" }} key={`${index}`}/>
                         </a>
                     );
                   })}

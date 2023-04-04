@@ -1,16 +1,15 @@
 import React from "react";
 import Feedback from "./components/feedback/Feedback";
-import "./App.css";
 import About from "./components/Body/about";
 import Connect from "./components/contact/connect";
-import Education from "./components/Education/edu";
-import Experiance from "./components/Experiance/exp";
-// import Navheader from './components/Navbar/nav';
-import SkillSet from "./components/skillSet/skillSet";
+import Education from "./components/Education/education";
+import Experiance from "./components/Experiance/experience";
+import SkillSet from "./components/skillSet/skills";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { theme } from "./Data/theme";
 
 function App() {
+  
   const [bulb, setbulb] = React.useState(theme[1]);
   const [themes, settheme] = React.useState(false);
   const [bgcolor, setColor] = React.useState("dark");
@@ -31,31 +30,12 @@ function App() {
   }
   return (
     <div className={`App bg-${bgcolor} text-${textcolor}`}>
-      <Navbar
-        expand="lg"
-        bg={bgcolor}
-        variant={bgcolor}
-        className={`text-${textcolor}`}
-      >
+      <Navbar expand="lg" bg={bgcolor} variant={bgcolor} className={`text-${textcolor}`}>
         <Container>
-        <Navbar.Brand className="justify-content-center">
-            <img
-              src={bulb}
-              alt=""
-              style={{ width: "30px", height: "40px" }}
-              onClick={(e) => changeTheme()}
-            />
-          </Navbar.Brand>
-          <Navbar.Brand href="" style={{ fontFamily: "Trade Winds,cursive" }}>
-            Marieswaran
-          </Navbar.Brand>
-
-
+          <Navbar.Brand className="justify-content-center"><img src={bulb} alt={bgcolor} style={{ width: "30px", height: "40px" }} onClick={(e) => changeTheme()}/></Navbar.Brand>
+          <Navbar.Brand href="" style={{ fontFamily: "Trade Winds,cursive" }}>Marieswaran</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="justify-content-end"
-          >
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#education">Education</Nav.Link>
@@ -66,7 +46,6 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
       <About bg={bgcolor} text={textcolor} />
       <Education bg={bgcolor} text={textcolor} />
       <SkillSet bg={bgcolor} text={textcolor} />
