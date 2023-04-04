@@ -1,8 +1,9 @@
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
+import {img} from '../../Data/image'
 // import { data } from "../../Data/social";
 export default function FeedBack(props: { bg: string,text:string }) {
   const [count, setCount] = React.useState("Loading...");
@@ -41,6 +42,20 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       fetchData();
     }
   });
+  function shownotification(){
+    if(!("Notification" in window)){
+      throw new Error("This Browser doesn't support notification")
+    }
+    else{
+      Notification.requestPermission().then((permission)=>{
+        new Notification("Hey Buddy",{
+          body:"Thanks your visit,Have a nice day",
+          icon:img[1]
+
+        })
+      })
+    }
+  }
   return (
     <Container className={`bg-${props.bg} text-${props.text}`}>
       <div
@@ -64,6 +79,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               >
                 <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
+                <Button className="btn btn-secondary" style={{"borderRadius":"100px"}}onClick={e=>shownotification()}>Greetings <FontAwesomeIcon icon={faHeart} /></Button>
               </Card>
             </div>
           </div>
