@@ -1,4 +1,4 @@
-import { faHeart, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faFaceFrown, faHeart, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React from "react";
@@ -6,19 +6,44 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 import {img} from '../../Data/image'
 // import { data } from "../../Data/social";
 export default function FeedBack(props: { bg: string,text:string }) {
+  const [mobilemsg,setmsg]=React.useState('')
   const [count, setCount] = React.useState("Loading...");
   const [Loading, setLoading] = React.useState(true);
- const [feedinfo, setFeed]: any = React.useState({
+ const [feedinfo, setFeed] = React.useState({
   Email: "",
   Feedback: "",
 });
+const [btn,setbtn]=React.useState({
+  names:"Send",
+  color:"primary",
+  icon:faPaperPlane
+})
 const handle = (e: any) => {
   setFeed({...feedinfo,[e.target.id]:e.target.value})
+  setbtn({
+    names:"Send",
+    color:"primary",
+    icon:faPaperPlane
+  })
 };
 const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  const userEmail=feedinfo.Email;
-  const userFeedback=feedinfo.Feedback;
-  window.open(`mailto:marieswaranbmw@gmail.com?subject=Feedback from ${userEmail}&body=${userFeedback}`);
+  e.preventDefault()
+  let userEmail:string=feedinfo.Email;
+  let userFeedback:string=feedinfo.Feedback;
+  if (!(userEmail===''||userFeedback==='')){
+    window.open(`mailto:marieswaranbmw@gmail.com?subject=Feedback from ${userEmail}&body=${userFeedback}`);
+   setFeed({
+    Email:'',
+    Feedback:''
+   })
+  }
+  else{
+        setbtn({
+          names:"Please fill all the info",
+          color:"danger",
+          icon:faFaceFrown
+        })
+  }
 }
   async function websiteVisits() {
     try {
@@ -43,6 +68,13 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     }
   });
   function shownotification(){
+    let details = navigator.userAgent;
+    let regexp = /android|iphone|kindle|ipad/i;
+    let isMobileDevice = regexp.test(details);
+    if(isMobileDevice){
+        setmsg('Current this feature available on desktop only' )
+    }
+
     if(!("Notification" in window)){
       throw new Error("This Browser doesn't support notification")
     }
@@ -80,6 +112,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
                 <Button className="btn btn-secondary" style={{"borderRadius":"100px"}}onClick={e=>shownotification()}>Greetings <FontAwesomeIcon icon={faHeart} /></Button>
+                <p>{mobilemsg}</p>
               </Card>
             </div>
           </div>
@@ -121,12 +154,12 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 </Form.Group>
 
                 <Button
-                  variant="primary"
+                  variant={btn.color}
                   type="submit"
                   style={{ width: "100%" }}
                   className="Submit mb-5"
                 >
-                  Send <FontAwesomeIcon icon={faPaperPlane} />
+                  {btn.names} <FontAwesomeIcon icon={btn.icon} />
                 </Button>
               </Form>
             </Card>
