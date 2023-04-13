@@ -30,7 +30,7 @@ function Experiance(props: { bg: string,text:string }) {
                 <h5 className="text-warning">Engineer</h5>
                 <ul>
                   <li>
-                    I have been worked as a Backend Engiener mainly concentrating
+                    I have been worked as a Backend Engineer mainly concentrating
                     to resolve and support the issues on Customer's end and Product flow
                     through Db queries and API endpoints,Performed Root cause
                     analysis and Troubleshooting using Kibana and AWS.

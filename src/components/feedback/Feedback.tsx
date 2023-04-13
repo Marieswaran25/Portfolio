@@ -1,4 +1,4 @@
-import { faFaceFrown, faHeart, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faFaceFrown, faHeart, faPaperPlane, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React from "react";
@@ -86,6 +86,9 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       })
     }
   }
+  function gotoxoxo(){
+    window.open('https://marieswaran25.github.io/Tic-tac-toe','_blank')
+  }
   return (
     <Container className={`bg-${props.bg} text-${props.text}`}>
       <div style={{ height: "auto", marginTop: "50px" }}id="feedback">
@@ -96,7 +99,11 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <Card bg={props.bg} style={{height: "250px",width: "100%",marginTop: "30px"}} className="content" id={`myimage2-${props.bg}`}>
                 <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
-                <Button className="btn btn-secondary mt-2" style={{"borderRadius":"100px"}}onClick={e=>shownotification()}>Greetings <FontAwesomeIcon icon={faHeart} /></Button>
+                <div className="content mt-2" style={{"gap":"15px"}}>
+                <Button className="btn btn-secondary" style={{"borderRadius":"100px"}}onClick={e=>shownotification()}>Greetings <FontAwesomeIcon icon={faHeart} /></Button>
+                <Button className="btn btn-secondary" style={{"borderRadius":"100px"}}onClick={e=>gotoxoxo()}>Play Game <FontAwesomeIcon icon={faPlay} /></Button>
+                </div>
+
                 <h6 className="text-muted mt-3" style={{fontSize:"15px"}}>{mobilemsg}</h6>
               </Card>
             </div>

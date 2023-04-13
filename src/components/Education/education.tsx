@@ -38,7 +38,7 @@ function Education(props: { bg: string; text: string }) {
                 if (!cardState) {
                   return (
                     <Card bg={props.bg} className="content" style={{ height: "100px" }}onMouseEnter={(e) => {displayInfo(index);}}key={`${index}`}>
-                      <h4 style={{ fontFamily: "Trade Winds,cursive" }}>{education[index].level}<FontAwesomeIcon icon={faGraduationCap} /></h4>
+                      <h4 style={{ fontFamily: "'Lexend Peta', sans-serif" }}><FontAwesomeIcon icon={faGraduationCap} /> {education[index].level}</h4>
                     </Card>
                   );
                 } else {
@@ -57,7 +57,7 @@ function Education(props: { bg: string; text: string }) {
                   } else {
                       return (
                         <Card bg={props.bg} className="content" style={{ height: "100px" }}onMouseEnter={(e) => {displayInfo(index);}}key={`${index}`}>
-                          <h4 style={{ fontFamily: "Trade Winds,cursive" }}>{education[index].level}<FontAwesomeIcon icon={faGraduationCap} /></h4>
+                          <h4 style={{ fontFamily: "'Lexend Peta', sans-serif" }}><FontAwesomeIcon icon={faGraduationCap} /> {education[index].level}</h4>
                         </Card>
                     );
                   }
