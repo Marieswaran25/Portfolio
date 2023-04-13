@@ -7,7 +7,7 @@ import whatsapp from '../media/whatsapp.png'
 export const data=[
     {
         "name":"LinkedIn",
-        "Link":"https://www.linkedin.com/in/marieswaran-b-5258b421b",
+        "Link":"https://www.linkedin.com/in/marieswaranb2501",
         "image":linkedin
     },
     {
