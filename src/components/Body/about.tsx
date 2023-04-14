@@ -40,7 +40,7 @@ export default function About(props: { bg: string,text:string }) {
                   <h1 className="display-4 text-warning" >Hey, I'm Marieswaran</h1>
                   <h4 className={`text-${props.text} context mt-3`} style={{fontFamily: 'Trade Winds,cursive'}}>Full stack Web Developer</h4>
                   <p className='mt-3 text-muted' style={{fontFamily: 'Lexend Peta, sans-serif',fontSize:"18px"}}>Discover something new !!</p>
-                  <button className={`text-light btn btn-secondary hire mt-2`} style={{fontFamily: "Lexend Peta', sans-serif"}} onClick={e=>gotocontact()}>
+                  <button className={`text-light btn btn-secondary hire  mt-2`} style={{fontFamily: "'Lexend Peta', sans-serif",fontSize:"x-small"}} onClick={e=>gotocontact()}>
                     Contact me <FontAwesomeIcon icon={faPhone} />
                   </button>
                 </div>
