@@ -29,7 +29,7 @@ function Education(props: { bg: string; text: string }) {
         <div className="row">
           <div className="col-12 col-md-6 content">
             <div>
-              <h4>"Develop a passion of learning,if you do,you will never cease to grow!"</h4>
+              <h4 style={{fontFamily: 'Trade Winds,cursive', fontSize:"large"}}>"Develop a passion of learning , if you do,you will never cease to grow!"</h4>
             </div>
           </div>
           <div className="col-12 col-md-6" style={{ marginTop: "30px" }}>
@@ -64,7 +64,7 @@ function Education(props: { bg: string; text: string }) {
                 }
               })}
             </div>
-            <Button id="download"className="btn-warning" style={{borderRadius: "100px",marginTop: "40px",fontFamily: "Trade Winds,cursive"}} onClick={(e) => downloadcv()}>
+            <Button id="download"className="btn-warning" style={{borderRadius: "100px",marginTop: "40px",fontFamily: "'Lexend Peta', sans-serif",fontSize:"small"}} onClick={(e) => downloadcv()}>
               Download CV <FontAwesomeIcon icon={faCloudArrowDown} />
             </Button>
           </div>

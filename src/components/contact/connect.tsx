@@ -23,7 +23,7 @@ export default function Connect(props: { bg: string,text:string }) {
           </div>
           <div className="col-12 col-md-6  order-1 order-md-2 content">
             <div style={{ position: "relative" }}>
-              <h4>"We Connect together,Grow together"</h4>
+              <h4 style={{fontFamily: 'Trade Winds,cursive', fontSize:"large"}}>"We Connect together , Grow together"</h4>
             </div>
           </div>
         </div>

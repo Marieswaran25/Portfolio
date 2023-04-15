@@ -95,7 +95,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         <div className="row">
           <div className="col-12 col-md-5 content">
             <div style={{ position: "relative" }}>
-              <h4>"We all need people who will give us feedback.."</h4>
+              <h4 style={{fontFamily: 'Trade Winds,cursive', fontSize:"large"}}>"We all need people who will give us feedback.."</h4>
               <Card bg={props.bg} style={{height: "250px",width: "100%",marginTop: "30px"}} className="content" id={`myimage2-${props.bg}`}>
                 <h1 style={{ fontSize: "80px" }} className={`text-${props.text}`}>{count}</h1>
                 <h6 className="text-info">Thanks for all the visitors!</h6>
@@ -112,14 +112,14 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <Card bg={props.bg} style={{ width: "90%",border:"none" }}>
               <Form className={`mb-4 pt-3 bg-${props.bg} text-${props.text}`}style={{ width: "auto" }}autoComplete="off" onSubmit={e=>{handlesubmit(e)}}>
                 <Form.Group className="mb-4">
-                  <Form.Label className={`text-${props.text}`}>Enter Your Email</Form.Label>
+                  <Form.Label className={`text-${props.text}`} style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Enter the Email</Form.Label>
                   <Form.Control type="email" placeholder="Enter the Email" id="Email" style={{ height: "50px" }} value={feedinfo.Email} onChange={e=>{handle(e)}}/>
                 </Form.Group>
                 <Form.Group className="mb-4">
-                  <Form.Label className={`text-${props.text}`}>Enter your Feedback</Form.Label>
+                  <Form.Label className={`text-${props.text}`} style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Enter your Feedback</Form.Label>
                   <Form.Control as={"textarea"} placeholder="Note down your feedback :)" id="Feedback" style={{ height: "100px" }} value={feedinfo.Feedback} onChange={e=>{handle(e)}}/>
                 </Form.Group>
-                <Button variant={btn.color}type="submit" style={{ width: "100%" }}className="Submit mb-5">{btn.names} <FontAwesomeIcon icon={btn.icon} /></Button>
+                <Button variant={btn.color}type="submit" style={{ width: "100%" ,height:"40px",fontFamily: "'Lexend Peta', sans-serif",fontSize:"small"}}className="Submit mb-5">{btn.names} <FontAwesomeIcon icon={btn.icon} /></Button>
               </Form>
             </Card>
           </div>

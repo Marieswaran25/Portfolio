@@ -1,4 +1,4 @@
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Card, Button } from "react-bootstrap";
 
@@ -14,20 +14,22 @@ function Experience(props: { bg: string,text:string }) {
         <div className="row">
           <div className="col-12 col-md-6 content">
             <div>
-              <h4>"Experience is Knowledge.All the rest are Information"</h4>
-              <h5>-Albert Einstein</h5>
+              <h4 style={{fontFamily: 'Trade Winds,cursive', fontSize:"large"}}>"Experience is Knowledge . All the rest are Information"</h4>
+              <h5 style={{fontFamily: 'Trade Winds,cursive', fontSize:"large"}}>-Albert Einstein</h5>
             </div>
           </div>
           <div className="col-12 col-md-6">
             <div style={{ position: "relative", marginTop: "30px" }}>
-              <Card bg={props.bg} className={`text-${props.text}`}>
-                <div className="content2" style={{ width: "90%" }}>
-                  <h2 style={{ color: "rgb(28, 199, 28)" }}>Prenetics Innovation Labs</h2>
-                  <p className="text-muted">Chennai</p>
+              <Card bg={props.bg} className={`text-${props.text}`} style={{border:"none"}}>
+<div style={{display:"flex","flexDirection":"column", gap:"10px"}}>
+<div className="content2" style={{ width: "90%" }}>
+                  <h3 style={{ color: "rgb(28, 199, 28)" }}>Prenetics Innovation Labs</h3>
+                  <p className="text-muted" style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Chennai</p>
                 </div>
-                <h6 className="text-muted">Aug2022-Apr2023</h6>
+                <h6 className="text-muted" style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Aug2022-Apr2023</h6>
+                <h5 > <FontAwesomeIcon icon={faLaptopCode} /> <span style={{fontFamily:"'Be Vietnam Pro', sans-serif"}} className="text-warning"> Graduate Engineer</span></h5>
 
-                <h5 className="text-warning">Engineer</h5>
+</div>
                 <ul>
                   <li>
                     I have been worked as a Backend Engineer mainly concentrating
@@ -45,7 +47,7 @@ function Experience(props: { bg: string,text:string }) {
                     diverse culture of people.
                   </li>
                 </ul>
-                <Button className={`btn btn-${props.bg} text-${props.text}`} onClick={(e) => {navToprenetics()}} style={{ fontFamily: "Trade Winds,cursive" }}>
+                <Button className={`btn btn-${props.bg} text-${props.text}`} onClick={(e) => {navToprenetics()}} style={{ fontFamily: "'Lexend Peta', sans-serif", fontSize:"small" }}>
                 More Info <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </Button>
               </Card>
