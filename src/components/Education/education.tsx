@@ -64,7 +64,7 @@ function Education(props: { bg: string; text: string }) {
                 }
               })}
             </div>
-            <Button className="btn-warning" style={{borderRadius: "100px",marginTop: "40px",fontFamily: "Trade Winds,cursive"}} onClick={(e) => downloadcv()}>
+            <Button id="download"className="btn-warning" style={{borderRadius: "100px",marginTop: "40px",fontFamily: "Trade Winds,cursive"}} onClick={(e) => downloadcv()}>
               Download CV <FontAwesomeIcon icon={faCloudArrowDown} />
             </Button>
           </div>

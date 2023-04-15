@@ -2,7 +2,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Card, Button } from "react-bootstrap";
 
-function Experiance(props: { bg: string,text:string }) {
+function Experience(props: { bg: string,text:string }) {
 
   function navToprenetics() {
     window.open("https://www.prenetics.com/", "_blank");
@@ -10,11 +10,11 @@ function Experiance(props: { bg: string,text:string }) {
 
   return (
     <Container className={`bg-${props.bg} text-${props.text}`}>
-      <div style={{ height: "auto", marginTop: "50px" }} className="content" id="experiance">
+      <div style={{ height: "auto", marginTop: "50px" }} className="content" id="experience">
         <div className="row">
           <div className="col-12 col-md-6 content">
             <div>
-              <h4>"Experiance is Knowledge.All the rest are Information"</h4>
+              <h4>"Experience is Knowledge.All the rest are Information"</h4>
               <h5>-Albert Einstein</h5>
             </div>
           </div>
@@ -33,7 +33,7 @@ function Experiance(props: { bg: string,text:string }) {
                     I have been worked as a Backend Engineer mainly concentrating
                     to resolve and support the issues on Customer's end and Product flow
                     through Db queries and API endpoints,Performed Root cause
-                    analysis and Troubleshooting using Kibana and AWS.
+                    analysis and Troubleshooting using Kibana and AWS Cloudwatch.
                   </li>
 
                   <li>
@@ -57,4 +57,4 @@ function Experiance(props: { bg: string,text:string }) {
   );
 }
 
-export default Experiance;
+export default Experience;

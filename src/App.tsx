@@ -3,7 +3,7 @@ import Feedback from "./components/feedback/Feedback";
 import About from "./components/Body/about";
 import Connect from "./components/contact/connect";
 import Education from "./components/Education/education";
-import Experiance from "./components/Experiance/experience";
+import Experience from "./components/Experience/experience";
 import SkillSet from "./components/skillSet/skills";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { theme } from "./Data/theme";
@@ -40,7 +40,7 @@ function App() {
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#education">Education</Nav.Link>
               <Nav.Link href="#skills">Skills</Nav.Link>
-              <Nav.Link href="#experiance">Experiance</Nav.Link>
+              <Nav.Link href="#experience">Experience</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -49,7 +49,7 @@ function App() {
       <About bg={bgcolor} text={textcolor} />
       <Education bg={bgcolor} text={textcolor} />
       <SkillSet bg={bgcolor} text={textcolor} />
-      <Experiance bg={bgcolor} text={textcolor} />
+      <Experience bg={bgcolor} text={textcolor} />
       <Feedback bg={bgcolor} text={textcolor} />
       <Connect bg={bgcolor} text={textcolor} />
     </div>

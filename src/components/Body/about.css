@@ -48,3 +48,7 @@
 .border-circle{
     border-radius: 50%;
 }
+#download{
+    width: 170px;
+    height: 45px;
+}
