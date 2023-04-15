@@ -8,7 +8,7 @@ function SkillSet(props: { bg: string,text:string }) {
       <div style={{"height":"auto","marginTop":"50px"}}  id="skills">
         <div className="row">
           <div className="col-12 col-md-6 order-2 order-md-1" style={{"marginTop":"30px"}}>
-            <div>
+            <div className="contentf">
               {social.map((val: any, index: any) => {
                 return (
                   <Card bg={props.bg} key={`${index}`}>

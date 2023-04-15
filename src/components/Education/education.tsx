@@ -33,7 +33,7 @@ function Education(props: { bg: string; text: string }) {
             </div>
           </div>
           <div className="col-12 col-md-6" style={{ marginTop: "30px" }}>
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative" }}className="contentf">
               {education.map((val: any, index: number) => {
                 if (!cardState) {
                   return (

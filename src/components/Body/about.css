@@ -52,3 +52,8 @@
     width: 170px;
     height: 45px;
 }
+.contentf{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
