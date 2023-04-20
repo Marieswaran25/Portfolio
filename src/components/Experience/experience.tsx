@@ -26,7 +26,7 @@ function Experience(props: { bg: string,text:string }) {
                   <h3 style={{ color: "rgb(28, 199, 28)" }}>Prenetics Innovation Labs</h3>
                   <p className="text-muted" style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Chennai</p>
                 </div>
-                <h6 className="text-muted" style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Aug2022-Apr2023</h6>
+                <h6 className="text-muted" style={{fontFamily:"'Be Vietnam Pro', sans-serif"}}>Aug2022</h6>
                 <h5 > <FontAwesomeIcon icon={faLaptopCode} /> <span style={{fontFamily:"'Be Vietnam Pro', sans-serif"}} className="text-warning"> Graduate Engineer</span></h5>
 
 </div>
