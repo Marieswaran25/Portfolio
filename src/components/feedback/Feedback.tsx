@@ -1,6 +1,6 @@
 import { faFaceFrown, faHeart, faPaperPlane, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
 import {img} from '../../Data/image'
@@ -42,28 +42,28 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         })
   }
 }
-  async function websiteVisits() {
-    try {
-      const response = await axios.get(
-        "https://api.countapi.xyz/hit/marieswaran.in/984b31b5-b2ff-4f89-a9db-9d0abaabcdcd"
-      );
-      const data = response.data.value;
-      return data;
-    } catch (error) {
-        return error;
-    }
-  }
-  React.useEffect(() => {
-    if (Loading) {
-      const fetchData = async (): Promise<Number> => {
-        setLoading(false);
-        const result = await websiteVisits();
-        setCount(result);
-        return result;
-      };
-      fetchData();
-    }
-  });
+  // async function websiteVisits() {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://api.countapi.xyz/hit/marieswaran.in/984b31b5-b2ff-4f89-a9db-9d0abaabcdcd"
+  //     );
+  //     const data = response.data.value;
+  //     return data;
+  //   } catch (error) {
+  //       return error;
+  //   }
+  // }
+  // React.useEffect(() => {
+  //   if (Loading) {
+  //     const fetchData = async (): Promise<Number> => {
+  //       setLoading(false);
+  //       const result = await websiteVisits();
+  //       setCount(result);
+  //       return result;
+  //     };
+  //     fetchData();
+  //   }
+  // });
   function shownotification(){
     let details = navigator.userAgent;
     let regexp = /android|iphone|kindle|ipad/i;
