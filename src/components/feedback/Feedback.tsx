@@ -85,7 +85,7 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     else{
       Notification.requestPermission().then((permission)=>{
         new Notification("Hey Buddy",{
-          body:"Thanks your visit,Have a nice day",
+          body:"Thanks for your visit,Have a nice day",
           icon:img[1]
         })
       })
