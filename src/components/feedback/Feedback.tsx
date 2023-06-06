@@ -55,15 +55,20 @@ const handlesubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   // }
   // React.useEffect(() => {
   //   if (Loading) {
-  //     const fetchData = async (): Promise<Number> => {
+  //     // const fetchData = async (): Promise<Number> => {
   //       setLoading(false);
-  //       const result = await websiteVisits();
-  //       setCount(result);
-  //       return result;
-  //     };
-  //     fetchData();
+  //     //   const result = await websiteVisits();
+  //     //   setCount(result);
+  //     //   return result;
+  //     // };
+  //     // fetchData();
+  //   const pick = Math.floor(Math.random() * 100);
+  //   console.log(pick);
+  //   localStorage.setItem('count',`${pick}`)
+  //   setCount(localStorage.getItem('count') as string)
+
   //   }
-  // });
+  // },[Loading]);
   function shownotification(){
     let details = navigator.userAgent;
     let regexp = /android|iphone|kindle|ipad/i;

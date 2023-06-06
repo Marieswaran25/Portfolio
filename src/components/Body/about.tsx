@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function About(props: { bg: string,text:string }) {
   const [image, setimg] = React.useState(img[1]);
   function changephoto() {
-    const pick = Math.floor(Math.random() * img.length);
-    setimg(img[pick]);
+    // const pick = Math.floor(Math.random() * img.length);
+    setimg(img[1]);
   }
   function gotocontact(){
     window.location.href='#contact'
